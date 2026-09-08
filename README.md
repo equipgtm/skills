@@ -17,7 +17,8 @@ npx skills add equipgtm/skills --skill equip
 
 Select your coding agent when prompted. The CLI defaults to project installation; choose
 global installation to use the skill across projects. It requires Node.js 22.20.0 or newer.
-For a manual install, use the [ZIP download](https://equipgtm.com/downloads/equipgtm-skill.zip)
+Find it on [skills.sh](https://skills.sh/equipgtm/skills/equip).
+For a manual install, use the [GitHub release ZIP](https://github.com/equipgtm/skills/releases/latest/download/equipgtm-skill.zip)
 and [installation guide](skills/equip/INSTALL.md).
 
 ## Start with an outcome
