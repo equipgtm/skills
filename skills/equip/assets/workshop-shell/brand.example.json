@@ -1,0 +1,19 @@
+{
+  "company": "Northwind",
+  "product": "Northwind Entitlements Workshop",
+  "tagline": "Stop entitlement drift before it reaches production — by building the checks on a real service.",
+  "spark": "◆",
+  "colors": {
+    "ink": "#15233b",
+    "bg": "#f6f8fb",
+    "accent": "#2f6fed",
+    "accent2": "#3aa6a0",
+    "accent3": "#7a8b3c"
+  },
+  "fonts": { "head": "Poppins", "body": "Lora" },
+  "group_order": ["Get started", "Build the checks", "Ship it"],
+  "links": [
+    { "label": "Sample repo", "href": "https://example.com/northwind/entitlements" },
+    { "label": "Docs", "href": "https://example.com/northwind/docs" }
+  ]
+}

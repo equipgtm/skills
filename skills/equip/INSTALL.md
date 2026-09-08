@@ -1,0 +1,112 @@
+# Use EquipGTM with your agent
+
+## Install from GitHub
+
+In your workshop repository, run:
+
+```bash
+npx skills add equipgtm/skills --skill equip
+```
+
+The [skills CLI](https://skills.sh/docs/cli) needs Node.js 22.20.0 or newer. Select your
+coding agent when prompted. Installation defaults to the current project; choose global
+installation if you want the skill available across projects. Read the changes before
+replacing an existing copy. Start a fresh agent session if skill discovery has not refreshed.
+
+The public source is [equipgtm/skills](https://github.com/equipgtm/skills). The skill and
+its included helpers use the MIT license. You can use them locally without an EquipGTM
+account; sign in when you want Studio to host learner pages and collect feedback.
+
+## Manual ZIP alternative
+
+Download [equipgtm-skill.zip](https://equipgtm.com/downloads/equipgtm-skill.zip) and extract it. The archive contains one
+`equip/` folder. Keep that folder intact: the references, templates and optional scripts
+are part of the skill. The accompanying download manifest records each file and its
+SHA-256 checksum. This is a portable skill folder, not a marketplace plugin or MCP server.
+
+Move the extracted `equip` folder into the directory for your agent. If an `equip` folder
+already exists, compare or back it up before replacing your edits.
+
+| Agent | Personal installation | Project-only alternative |
+| --- | --- | --- |
+| Codex | `~/.agents/skills/equip/` | `.agents/skills/equip/` in the workshop repository |
+| Claude Code | `~/.claude/skills/equip/` | `.claude/skills/equip/` in the workshop repository |
+| Cursor | `~/.cursor/skills/equip/` | `.cursor/skills/equip/` in the workshop repository |
+
+The resulting path must end in `equip/SKILL.md`, without an extra nested `equip` folder.
+Open the workshop repository in your agent. Select EquipGTM from its skill picker, or
+ask it to read the installed `equip/SKILL.md`. Codex CLI/IDE can invoke `$equip`; Claude
+Code can invoke `/equip`. If discovery has not refreshed, start a new agent session.
+
+These are local-agent instructions. A remote or cloud agent needs the skill in its own
+workspace or that product's supported sync/install flow; local files and browser sessions
+are not automatically shared. Other agents can use the extracted folder when they support
+Agent Skills or can read its Markdown and supporting files.
+
+Installation locations were checked against the official
+[Codex skills guide](https://developers.openai.com/codex/skills),
+[Claude Code skills guide](https://code.claude.com/docs/en/skills), and
+[Cursor skills guide](https://cursor.com/docs/skills) on 2026-09-08.
+
+## Start a workshop
+
+Sign in to EquipGTM through the website and open your workspace. Give your agent the
+customer outcome, audience, duration, product documentation or repository, and any brand
+guide or logo you already have. For example:
+
+> Use the EquipGTM skill to build a 90-minute workshop for customer developers. Start
+> from this repository and the product documentation I supplied. Reuse my brand assets.
+> Plan the lessons, exercises, presentation and feedback before generating the artifacts.
+> Ask only about missing choices that affect the work. Keep content hosting, exercise
+> access and feedback separate. Prepare the workshop repository and the files Studio
+> needs. Report checks you actually ran and anything still unverified.
+
+Your agent works in your repository with your existing tools. EquipGTM does not provide
+an agent subscription or vendor exercise accounts. You or the vendor arrange any needed
+accounts, projects and credits. An agent is optional for learners unless the lesson needs it.
+
+## Connect to Studio when supported
+
+An installed skill gives your agent instructions. It does not connect the agent to your
+account. Open the signed-in Studio page in a browser client that exposes WebMCP page tools
+to your agent. In **Agent access**, a ready status means the page registered its browser
+tools; it does not prove your agent can call them.
+
+Ask the agent to discover tools and call `equipgtm_list_workshops` first. Check the
+returned workspace and workshop list, then call `equipgtm_get_workshop` for the intended
+draft before changing it. Use returned IDs and the current `updatedAt` token. Never copy
+cookies, passwords or login codes into prompts. Native Codex, Claude Code and Cursor
+connection support depends on their actual browser/client capabilities; this package
+does not claim that every installation has a working WebMCP connection.
+
+If the agent cannot discover or call these tools, continue with the ordinary UI:
+
+1. Have the agent author the repository and generate its supported `workshop.json` draft.
+2. In Build, use **Import draft**, then upload the actual code, notebooks, slides and other
+   materials in **Files**. Choose the learner or instructor audience for each file.
+3. Review the lessons, branding, survey and rendered materials. Save a release and create
+   a session. Open the returned learner link and check its instructions and downloads.
+4. Read submitted feedback in Improve. Export the results or give the agent the relevant
+   results for revision. Export instructor materials when it needs the latest draft.
+
+The agent handles JSON behind the scenes; a JSON import does not include unattached
+repository files or render a PPTX. Browser automation may use these same controls where
+your client supports it. The public customer workflow needs your website account, not
+the service operator's AWS credentials or its internal pilot bridge.
+
+## Optional script dependencies
+
+Reading the skill and authoring files requires no Python or Node package installation.
+The included PPTX audit uses Python 3.10+ and the standard library. It checks structure;
+it neither renders slides nor proves native PowerPoint playback.
+
+The optional static-page renderer needs Python 3.10+, Python-Markdown and Pygments from
+`requirements.txt`. Ask your agent to use your configured Python interpreter and a local
+virtual environment, then install that file with the environment's `python -m pip install
+-r requirements.txt`. Run scripts from the extracted skill folder or use their full paths.
+Existing customer page builds and available presentation renderers keep their own dependencies.
+The static renderer does not copy referenced code, notebooks or images: package them at
+the expected paths and test the delivered downloads.
+
+No login configuration, deployment tools, credentials or customer workshop data are
+included. Installing the skill does not execute its scripts or publish a workshop.

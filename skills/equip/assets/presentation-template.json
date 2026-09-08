@@ -1,0 +1,91 @@
+{
+  "workshopUrl": "",
+  "surveyUrl": "",
+  "slides": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "title": "Catch entitlement drift before production",
+      "body": "A customer changes plan. Two services disagree about their access. Today, you will build a check that spots the mismatch.",
+      "notes": "Introduce a concrete customer scenario. This is the workshop goal, not a claim that an untested example already works. Show a real before/after result once the verifier has reproduced it. Allow 2 minutes. [Sources] Presenter synthesis; replace with the product evidence used in this workshop. [/Sources]",
+      "visual": "Compare the same customer's plan in two services. Label the differing entitlement. Use a real sanitized screenshot when available; otherwise identify this as an illustrative scenario.",
+      "reveals": []
+    },
+    {
+      "id": "join",
+      "kind": "join",
+      "title": "Open the workshop on your laptop",
+      "body": "Keep the lessons beside your editor. Check prerequisites and ask the instructor if access is missing.",
+      "notes": "The workshop URL is pending. Bind a verified, easy-to-type session URL before delivering. Read it aloud and allow setup time. Do not create a QR for this slide. The learner uses their own agent and vendor account or the documented vendor-provided sandbox. [Sources] Workshop prerequisites and session access plan. [/Sources]",
+      "visual": "Large, readable workshop URL when available, with a laptop icon. No workshop QR code.",
+      "reveals": []
+    },
+    {
+      "id": "agenda",
+      "kind": "agenda",
+      "title": "See it, encode it, check it",
+      "body": "First we inspect a mismatch. Then we describe the rule. Finally, we run the check and compare results.",
+      "notes": "Explain which portions are demonstrations and which are hands-on. Align the route with actual module names, checks and timing. Reserve time for regrouping and questions before expanding the technical middle. [Sources] Workshop module plan. [/Sources]",
+      "visual": "Three connected steps with a consistent icon for inspect, rule and check. Highlight where learners will work in their editor.",
+      "reveals": []
+    },
+    {
+      "id": "concept",
+      "kind": "concept",
+      "title": "One plan change reaches two services",
+      "body": "Start with the customer's plan.",
+      "notes": "Start: customer and current plan. Click 1: reveal Service A and its access value. Click 2: reveal Service B and its different value. Click 3: connect the two and name the disagreement entitlement drift. Explain the behavior before introducing the term. Group each service, label and connector. [Sources] Presenter synthesis; ground values in the verified exercise fixture. [/Sources]",
+      "visual": "A request path from a customer plan to two named application services. Use semantic icons and group each label with its node and connecting arrow.",
+      "reveals": [
+        "Service A grants access.",
+        "Service B denies access.",
+        "The mismatch is entitlement drift."
+      ]
+    },
+    {
+      "id": "exercise",
+      "kind": "exercise",
+      "title": "Find the mismatch",
+      "body": "Open the first exercise. Compare both service records. Record the differing entitlement before changing anything.",
+      "notes": "Point to the exact lesson and checkpoint after they have been authored. Demonstrate only the first action, then pause for learners. Put full commands, expected results and reset instructions in the lesson. Ask the room to signal when ready to regroup. [Sources] First workshop module and its reproduced verification record. [/Sources]",
+      "visual": "A readable crop of the actual records, highlighting only the fields needed for the exercise. Do not fabricate successful output.",
+      "reveals": []
+    },
+    {
+      "id": "debrief",
+      "kind": "debrief",
+      "title": "What did your check find?",
+      "body": "Compare your output with the checkpoint. Explain why the mismatch matters and what the rule must preserve.",
+      "notes": "Use the real expected output from verification. Distinguish a learner's report from a reproduced result. Discuss one common mistake and its recovery path before continuing. If access blocked the exercise, show the verified demo and state the limitation. [Sources] Module proof, verifier output and facilitator recovery notes. [/Sources]",
+      "visual": "Actual checkpoint output beside the relevant rule. Use direct labels, not a full terminal screenshot with unreadable lines.",
+      "reveals": []
+    },
+    {
+      "id": "recap",
+      "kind": "recap",
+      "title": "Carry the check into your own workflow",
+      "body": "Inspect the mismatch. Encode the rule. Run the check. Choose one real workflow where this pattern could prevent a customer problem.",
+      "notes": "Return to the opening customer scenario. Summarize only what the exercises and evidence support. Name the pieces the learner can adapt and the checks needed before using them with real customer data. [Sources] Workshop modules and verification records. [/Sources]",
+      "visual": "Return to the opening comparison, now connected to the rule and check. Show measured or reproduced results only when available.",
+      "reveals": []
+    },
+    {
+      "id": "questions",
+      "kind": "questions",
+      "title": "Where would this fit in your system?",
+      "body": "Bring a question, a tradeoff, or a setup problem we should work through together.",
+      "notes": "Use the reserved Q&A time. Record unanswered product questions for follow-up without inventing behavior. Move to the survey close while learners consider their next application. [Sources] Presenter synthesis. [/Sources]",
+      "visual": "One restrained question or conversation icon. Keep the screen quiet while the room speaks.",
+      "reveals": []
+    },
+    {
+      "id": "survey",
+      "kind": "survey",
+      "title": "Help improve the next workshop",
+      "body": "Tell us what you could complete, where you got stuck, and what we should change.",
+      "notes": "The survey URL is pending. Bind this session's verified survey link before delivery. Generate its QR only from that real URL, show the readable URL as fallback, and test the final slide on a phone. Allow time to respond. [Sources] Session survey definition. [/Sources]",
+      "visual": "A high-contrast QR for the verified survey URL, with its readable URL alongside it. Keep an intact quiet zone. Until a real URL exists, show Survey link pending and no QR.",
+      "reveals": []
+    }
+  ]
+}

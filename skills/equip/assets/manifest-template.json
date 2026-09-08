@@ -1,0 +1,80 @@
+{
+  "use_case": "<one-line name for the journey, in the customer's words>",
+  "audience": {
+    "role": "<e.g., platform engineering team>",
+    "industry": "<e.g., fintech>",
+    "facing": "external"
+  },
+  "outcome": "<the value unlocked, stated as something the customer can do or stop doing>",
+  "starting_point": "<where they are today: stack, current workaround, the pain>",
+  "product_source": "<path or URL to the product repo/docs used for grounding>",
+  "artifacts": [
+    "workshop"
+  ],
+  "version": "1.0",
+  "verification": {
+    "product_version": "<release or repository revision used for the proof>",
+    "verified_at": null,
+    "evidence_path": "verification/"
+  },
+  "delivery": {
+    "mode": "live",
+    "bundle_path": "delivery/",
+    "cohort_id": null,
+    "starts_at": null,
+    "instructor": "<instructor or team>",
+    "support_contact": "<where learners request help>",
+    "content_host": {
+      "kind": null,
+      "url": null,
+      "owner": null
+    },
+    "exercise_environment": {
+      "kind": null,
+      "launch_url": null,
+      "owner": null,
+      "setup_path": null,
+      "preflight_path": null,
+      "cleanup_path": null
+    },
+    "feedback_destination": {
+      "kind": null,
+      "url": null,
+      "owner": null
+    },
+    "source_commit": null,
+    "release_tag": null
+  },
+  "access": {
+    "mode": "learner-owned",
+    "prerequisites": [],
+    "vendor_accounts": []
+  },
+  "tutor": {
+    "enabled": false,
+    "instructions_path": null,
+    "guidance": "Use the learner's own agent for workshop-scoped hints; checkpoint results require explicit submission.",
+    "setup_prompt_path": null
+  },
+  "modules": [
+    {
+      "title": "<the step, named by what the customer achieves in it>",
+      "customer_value": "<why this step matters to the outcome, one sentence>",
+      "capability": "<the single product capability this step leans on>",
+      "proof": "<an objective proof: a command + expected output, a passing test, a metric>",
+      "status": "draft"
+    }
+  ],
+  "presentation": {
+    "storyboard_path": "slides/presentation.json",
+    "deck_path": null,
+    "qa_path": "slides/qa.md"
+  },
+  "planning": {
+    "path": "PLAN.md"
+  },
+  "repository": {
+    "path": ".",
+    "remote_url": null
+  }
+}
