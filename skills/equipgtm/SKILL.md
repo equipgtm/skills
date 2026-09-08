@@ -3,9 +3,8 @@ name: equipgtm
 license: MIT
 description: >-
   Plan, build, deliver, and improve complete technical workshop Git repositories
-  using the instructor's own coding agent and EquipGTM Studio. Use for customer or field workshops, technical
-  demos, battlecards and related enablement artifacts that need grounding in a
-  real product, independent verification, portable delivery and explicit learner
+  using the instructor's own agent and EquipGTM Studio. Use for customer or field workshops, technical
+  demos, battlecards and related enablement artifacts that need grounding in real products, independent verification, portable delivery and explicit learner
   feedback. Also use to import or revise Studio drafts, customize workshop surveys,
   create workshop presentations, apply customer branding, or improve lessons from submitted results through available tools or file handoff.
 ---
@@ -13,8 +12,9 @@ description: >-
 # EquipGTM — technical workshop authoring
 
 EquipGTM Studio organizes **Build → Deliver → Improve** for technical instructors.
-EquipGTM is its reusable authoring method, run inside the instructor's own coding agent.
-Turn one customer outcome into a complete workshop Git repository: pages, modules,
+EquipGTM is its reusable authoring method, run inside the instructor's own agent.
+Start from the customer outcome and use cases, including multiple products and technologies
+when needed. Build a complete workshop Git repository: pages, modules,
 exercises, code, example scripts, notebooks, presentation source and PPTX, and supporting
 assets as needed. Verify it against the real product, prepare a versioned learner release,
 and improve the next version using explicit feedback and check submissions. JSON records
@@ -32,10 +32,12 @@ tool interchange; do not make instructors or learners hand-edit JSON to use the 
 
 For tasks involving Studio records or feedback, read
 [references/studio-agent.md](references/studio-agent.md) and use available UI or discovered
-`equipgtm_*` browser tools. Use machine-readable file handoff only when needed by that
+`equipgtm_*` browser tools. Studio opens on **Build with your agent**, with a copyable
+intake prompt. When WebMCP is unavailable, the bundled `scripts/equipgtm.mjs` CLI can
+use temporary workspace access that the user sets up in their terminal. Use machine-readable file handoff only when needed by that
 integration. WebMCP support does not automatically connect a native coding-agent session.
 Read [INSTALL.md](INSTALL.md) for customer installation, account sign-in and the supported
-file fallback. Open the customer's signed-in workspace, discover available tools and call
+CLI and file fallbacks. Open the customer's signed-in workspace, discover available tools and call
 `equipgtm_list_workshops` before reading the intended draft. Use returned workspace and
 workshop IDs; never assume an operator identity or a shared browser cookie. Installing
 this skill does not configure an MCP server or prove a native agent connection.

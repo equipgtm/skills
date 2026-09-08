@@ -9,7 +9,7 @@ npx skills add equipgtm/skills --skill equipgtm
 ```
 
 The [skills CLI](https://skills.sh/docs/cli) needs Node.js 22.20.0 or newer. Select your
-coding agent when prompted. Installation defaults to the current project; choose global
+agent when prompted. Installation defaults to the current project; choose global
 installation if you want the skill available across projects. Read the changes before
 replacing an existing copy. Start a fresh agent session if skill discovery has not refreshed.
 
@@ -54,9 +54,12 @@ Installation locations were checked against the official
 
 ## Start a workshop
 
-Sign in to EquipGTM through the website and open your workspace. Give your agent the
-customer outcome, audience, duration, product documentation or repository, and any brand
-guide or logo you already have. For example:
+Sign in to EquipGTM and open **Build with your agent**, the default workspace page.
+Copy its prompt into Codex, Claude Code, Cursor or your preferred agent. It invokes this
+skill and starts the intake: customer outcome, audience, use cases, technologies and
+their roles, access plan, duration and branding. No workshop form is required first.
+Use `$equipgtm` in Codex, `/equipgtm` in Claude Code, or select/read the skill in other agents.
+For example:
 
 > Use the EquipGTM skill to build a 90-minute workshop for customer developers. Start
 > from this repository and the product documentation I supplied. Reuse my brand assets.
@@ -73,7 +76,7 @@ accounts, projects and credits. An agent is optional for learners unless the les
 
 An installed skill gives your agent instructions. It does not connect the agent to your
 account. Open the signed-in Studio page in a browser client that exposes WebMCP page tools
-to your agent. In **Agent access**, a ready status means the page registered its browser
+to your agent. In **Build with your agent**, a ready status means the page registered its browser
 tools; it does not prove your agent can call them.
 
 Ask the agent to discover tools and call `equipgtm_list_workshops` first. Check the
@@ -83,10 +86,39 @@ cookies, passwords or login codes into prompts. Native Codex, Claude Code and Cu
 connection support depends on their actual browser/client capabilities; this package
 does not claim that every installation has a working WebMCP connection.
 
-If the agent cannot discover or call these tools, continue with the ordinary UI:
+## CLI fallback
+
+If browser tools are unavailable, open **Build with your agent → Through the CLI**
+and create temporary access. Run this command yourself in a terminal, using your actual
+installed skill folder and the workspace ID shown in Studio:
+
+```bash
+node <skill-folder>/scripts/equipgtm.mjs login --workspace WORKSPACE_ID
+```
+
+Paste the access token into the hidden terminal prompt. Never paste it in agent chat.
+The CLI stores it in `~/.config/equipgtm/access.json` with owner-only permissions, outside
+the workshop repo. An agent running in that same environment can now use the CLI:
+
+```bash
+node <skill-folder>/scripts/equipgtm.mjs request GET /state
+```
+
+Access is limited to this workspace's workshops, sessions and results, with your current
+role. It lasts at most one hour and ends when the originating website session signs out.
+Creating new access replaces the previous grant for this workspace. Use **Revoke this
+access** in Studio to end it early, or `logout` in the CLI to remove the local copy.
+Other machines and cloud agents need their own user-configured connection; do not copy
+credentials into workshop artifacts. The API/CLI does not manage invitations or SSO.
+Read [references/studio-agent.md](references/studio-agent.md) for payloads and uploads.
+
+## File fallback
+
+If neither browser tools nor CLI access is available, keep building locally:
+
 
 1. Have the agent author the repository and generate its supported `workshop.json` draft.
-2. In Build, use **Import draft**, then upload the actual code, notebooks, slides and other
+2. In Workshops, use **Import draft**, then upload the actual code, notebooks, slides and other
    materials in **Files**. Choose the learner or instructor audience for each file.
 3. Review the lessons, branding, survey and rendered materials. Save a release and create
    a session. Open the returned learner link and check its instructions and downloads.

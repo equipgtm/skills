@@ -1,6 +1,6 @@
 # EquipGTM skill
 
-Build technical workshops with your own coding agent. Keep lessons, exercises, code,
+Build technical workshops with your own agent. Keep lessons, exercises, code,
 slides and feedback questions in a workshop repository you can review and version.
 
 The `equipgtm` skill helps developer advocates, partner engineers and customer architects
@@ -15,7 +15,7 @@ Run this in the repository where you want to build a workshop:
 npx skills add equipgtm/skills --skill equipgtm
 ```
 
-Select your coding agent when prompted. The CLI defaults to project installation; choose
+Select your agent when prompted. The CLI defaults to project installation; choose
 global installation to use the skill across projects. It requires Node.js 22.20.0 or newer.
 Install directly from GitHub while [skills.sh updates the name](https://github.com/vercel-labs/skills/issues/2172).
 For a manual install, use the [GitHub release ZIP](https://github.com/equipgtm/skills/releases/latest/download/equipgtm-skill.zip)
@@ -48,9 +48,15 @@ The skill works locally without an EquipGTM account. [EquipGTM Studio](https://e
 adds hosted learner pages, branded workshops, uploaded files, frozen releases and survey
 results. Create a workspace when you want to publish there.
 
-A compatible browser client can expose Studio's WebMCP tools to your agent. Installing
-the skill alone does not connect your browser or account. You can also import drafts,
-upload files and export feedback through the UI. AWS Workshop Studio, a customer site
+Studio opens on **Build with your agent**: copy an outcome-based prompt and let the
+skill handle intake, planning and authoring. Workshops can span several products and
+technologies, such as an embedding model, knowledge base and chat UI.
+
+A compatible browser client can expose Studio's WebMCP tools to your agent. If browser
+tools are unavailable, the bundled Node CLI can create/update drafts, upload materials
+and retrieve survey results using short-lived workspace access. See the
+[connection guide](skills/equipgtm/INSTALL.md#cli-fallback). Installing the skill alone
+does not connect your browser or account. UI import/export remains available. AWS Workshop Studio, a customer site
 or another content host can remain your delivery destination.
 
 You or the vendor arrange product accounts, environments and credits. Learners use their

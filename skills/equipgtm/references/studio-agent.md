@@ -360,3 +360,56 @@ Revise the working draft, retain the delivered version and rerun the affected in
 checks as described in [refresh.md](refresh.md). Local-mode results stay on that device;
 cloud-mode results come from explicit submissions to the deployed session. Label automated
 pilot submissions as test data rather than customer feedback.
+
+
+## Direct API / bundled CLI
+
+Prefer discovered browser tools when available. Otherwise use `scripts/equipgtm.mjs`
+from the installed skill with Node 22+. The user first creates temporary access on the
+**Build with your agent** page and enters it themselves into the CLI's hidden login
+prompt (see INSTALL.md). Never ask them to put a token in chat or read/print its local
+credential file. The CLI reads credentials internally. No AWS access is required.
+
+The API is at `https://equipgtm.com/api`. The CLI supplies a workspace-scoped bearer
+and `X-EquipGTM-Workspace`. Calls follow current team permissions; tokens cannot manage
+accounts, team invitations, SSO or other tokens. `401` means reconnect in Studio, `403`
+means scope/role mismatch, and `409` means read the current state before revising. Do not
+retry a stale write with a newer token without reconciling the actual changes first.
+
+```bash
+node <skill-folder>/scripts/equipgtm.mjs request GET /state
+node <skill-folder>/scripts/equipgtm.mjs request POST /workshops --file create-request.json
+node <skill-folder>/scripts/equipgtm.mjs request PUT /workshops/WORKSHOP_ID --file update-request.json
+node <skill-folder>/scripts/equipgtm.mjs upload WORKSHOP_ID workshop-learner.zip learner
+node <skill-folder>/scripts/equipgtm.mjs upload WORKSHOP_ID slides.pptx instructor
+node <skill-folder>/scripts/equipgtm.mjs request GET /sessions/SESSION_ID/results?includeResponses=true
+node <skill-folder>/scripts/equipgtm.mjs request GET /gtm?export=salesforce
+```
+
+Quote paths containing query parameters in your shell. The CLI prints JSON results;
+exports return a filename, MIME type and CSV content. Keep participant data outside
+public repositories and use only consented contacts for requested follow-up.
+
+Create requests use `{"workshop": <draft>}`. The draft includes the snapshot fields
+above plus an optional `product` text summary (e.g. `Embedding model, vector store,
+chat UI`), `reviewed: false`, and module IDs. IDs may be omitted on creation; Studio
+assigns them. Do not put file bytes in the request unless using the supported inline
+asset schema. For updates, take the full workshop from `/state`, preserve its ID,
+branding, designPlan, survey, presentation and cloudAssets, edit the intended fields,
+then send `{"workshop": <revised draft>, "expectedUpdatedAt": <latest updatedAt>}`.
+Use the exact current revision. The legacy `product` field is an optional summary,
+not a single-product restriction; capture detailed component roles in PLAN.md.
+
+The upload command requests a signed S3 upload, transfers the file without the workspace
+bearer, and finalizes its attachment using the draft revision read before the upload.
+A file can be up to 50 MiB; the workshop allows 20 attachments and 100 MiB in total.
+Inspect `/state` after an interrupted call before uploading again. A failed finalization
+must be reconciled against the current draft, not silently treated as uploaded.
+
+Other supported routes: POST `/workshops/ID/release` with `expectedUpdatedAt`, GET
+`/workshops/ID/download?source=draft&mode=instructor`, POST `/sessions` with
+`workshopId`, `title` and `date`, GET `/sessions/ID/results`, PATCH `/sessions/ID/plan`,
+PUT `/sessions/ID` to set status, and POST `/sessions/ID/repeat`. Read existing session
+shapes before updates. Saving a release still requires Studio's review and content checks;
+the CLI does not verify teaching quality or execute exercises. Follow the user's existing
+authorization for release and sharing. Refresh or return to Workshops to see CLI uploads.

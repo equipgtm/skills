@@ -2,19 +2,19 @@
   "schemaVersion": 1,
   "name": "equipgtm",
   "title": "EquipGTM authoring skill",
-  "version": "4c71a4b06d5a0861",
+  "version": "e5331756a6678fc6",
   "format": "agent-skill-zip",
   "entrypoint": "equipgtm/SKILL.md",
   "downloadUrl": "/downloads/equipgtm-skill.zip",
   "installationGuide": "/downloads/INSTALL.md",
-  "bytes": 87372,
-  "sha256": "15b73bd513a6ec200359637c44bff6c9af133b0cdadfc574d96ca9003b5c490f",
-  "fileCount": 26,
+  "bytes": 93019,
+  "sha256": "a1538abfa947261fa97e85f78f6248826aa229159a75cb00d071bc6c3b7591db",
+  "fileCount": 27,
   "files": [
     {
       "path": "equipgtm/INSTALL.md",
-      "bytes": 6897,
-      "sha256": "05ad7c10c18061abb8c3d70e7f1108a0bc91379be9dc8710b6a43b6a1f9eb672"
+      "bytes": 8431,
+      "sha256": "620a98a8d0e77e952e19b6fd7de220afec091e629cb85791403226ce3b214d57"
     },
     {
       "path": "equipgtm/LICENSE.skill",
@@ -23,8 +23,8 @@
     },
     {
       "path": "equipgtm/SKILL.md",
-      "bytes": 22833,
-      "sha256": "29c9f4e81e4a65033a6b701e0473dee3fff8690f5efc20aa9bbf7e07d65f6256"
+      "bytes": 23122,
+      "sha256": "2c4d5fa1d92877a49d38ec31fbdbb821f5aa19e5ddf204e6c8e401e1ba377b2f"
     },
     {
       "path": "equipgtm/agents/verifier.md",
@@ -78,8 +78,8 @@
     },
     {
       "path": "equipgtm/references/intake.md",
-      "bytes": 7014,
-      "sha256": "cb3a1c63c40a9558a66e6cc52ce34fa0828f66591cf765fa5509088cb8b4475f"
+      "bytes": 7559,
+      "sha256": "d18d1b954fdf20cacd4898d134ce08992fdb2c02c09c5bc2a4c382900f1b5340"
     },
     {
       "path": "equipgtm/references/poc-plan.md",
@@ -113,8 +113,8 @@
     },
     {
       "path": "equipgtm/references/studio-agent.md",
-      "bytes": 25282,
-      "sha256": "7a3e7acc8ecf40049aa221f55eba20473c02777342335b201b17f6708927cabb"
+      "bytes": 28833,
+      "sha256": "1d1a64ff2b3b73b870617f90ae4d5c9c250cf547429a115673529483b25fd3b0"
     },
     {
       "path": "equipgtm/references/survey.md",
@@ -140,6 +140,11 @@
       "path": "equipgtm/scripts/build_workshop.py",
       "bytes": 9527,
       "sha256": "9fd4d8696e9129224f9f216c428510e4ba312846250d5e5bf9dc55c985a22597"
+    },
+    {
+      "path": "equipgtm/scripts/equipgtm.mjs",
+      "bytes": 8632,
+      "sha256": "ab9dc564def9771d4c9bde4605fba7bae4965bef11c74a8bab3a580eaf5e7757"
     }
   ]
 }

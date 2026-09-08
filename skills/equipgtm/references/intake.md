@@ -16,6 +16,11 @@ Propose a concrete customer scenario where the request is vague. A workshop abou
 product needs a result the learner can achieve with it. Keep assumptions explicit and
 revise them when the user supplies better information.
 
+For a RAG workshop, the stack might include an embedding model, knowledge base, retrieval
+service, chat UI and evaluation tool. Capture their roles and account requirements in
+`PLAN.md`; do not force a single vendor or ask for a product name before the outcome is clear.
+Prioritize a teachable customer scenario, then choose the stack and use cases that support it.
+
 ## Use the host's planning tools when available
 
 Use a host-provided planning capability when it is available and permitted in the current
@@ -35,6 +40,7 @@ recorded and used immediately.
 | Decision | What to settle |
 | --- | --- |
 | Outcome and audience | What learners can do afterward, their roles and technical depth, and the customer scenario |
+| Products and technology roles | Every relevant component, what it contributes to the outcome, supplied versions/docs, and which parts learners build versus use preconfigured |
 | Teaching format | Duration, live/self-paced, hands-on versus watch-along, module arc, demo and Q&A time |
 | Source repository | Existing/new local Git repo, requested remote host/owner, source conventions and requested files |
 | Content host | Where the pages, module instructions and material links will be delivered |
