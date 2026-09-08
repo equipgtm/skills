@@ -3,7 +3,7 @@
 Build technical workshops with your own coding agent. Keep lessons, exercises, code,
 slides and feedback questions in a workshop repository you can review and version.
 
-The `equip` skill helps developer advocates, partner engineers and customer architects
+The `equipgtm` skill helps developer advocates, partner engineers and customer architects
 plan the workshop, ground it in real product documentation, build the material and
 check what learners will receive.
 
@@ -12,19 +12,19 @@ check what learners will receive.
 Run this in the repository where you want to build a workshop:
 
 ```bash
-npx skills add equipgtm/skills --skill equip
+npx skills add equipgtm/skills --skill equipgtm
 ```
 
 Select your coding agent when prompted. The CLI defaults to project installation; choose
 global installation to use the skill across projects. It requires Node.js 22.20.0 or newer.
-Find it on [skills.sh](https://skills.sh/equipgtm/skills/equip).
+Find it on [skills.sh](https://skills.sh/equipgtm/skills/equipgtm).
 For a manual install, use the [GitHub release ZIP](https://github.com/equipgtm/skills/releases/latest/download/equipgtm-skill.zip)
-and [installation guide](skills/equip/INSTALL.md).
+and [installation guide](skills/equipgtm/INSTALL.md).
 
 ## Start with an outcome
 
-Open a fresh agent session in your workshop repository. Invoke `$equip` in Codex,
-`/equip` in Claude Code, or ask your agent to use the EquipGTM skill:
+Open a fresh agent session in your workshop repository. Invoke `$equipgtm` in Codex,
+`/equipgtm` in Claude Code, or ask your agent to use the EquipGTM skill:
 
 > Build a 60-minute workshop for developers who need to make failed webhook deliveries
 > safe to retry. Use the product documentation and starter repository I provide. Plan
@@ -58,7 +58,7 @@ own tools; EquipGTM does not supply cloud accounts or coding-agent subscriptions
 
 ## Source and feedback
 
-Read the [skill](skills/equip/SKILL.md), its [Studio tool reference](skills/equip/references/studio-agent.md)
+Read the [skill](skills/equipgtm/SKILL.md), its [Studio tool reference](skills/equipgtm/references/studio-agent.md)
 or the [skills.sh installation docs](https://skills.sh/docs/cli).
 Report reproducible skill issues in [GitHub Issues](https://github.com/equipgtm/skills/issues).
 Omit credentials, private workshop material and learner responses from public reports.

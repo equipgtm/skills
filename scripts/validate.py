@@ -7,7 +7,7 @@ import re
 
 root = Path(__file__).resolve().parents[1]
 manifest = json.loads((root / "skill-manifest.json").read_text())
-skill = root / "skills" / "equip"
+skill = root / "skills" / "equipgtm"
 expected = set()
 for entry in manifest["files"]:
     path = root / "skills" / entry["path"]
@@ -20,7 +20,7 @@ actual = {path.resolve() for path in skill.rglob("*") if path.is_file()}
 assert actual == expected, "Unexpected or missing skill files"
 assert len(actual) == manifest["fileCount"], "File count mismatch"
 text = (skill / "SKILL.md").read_text()
-assert text.startswith("---\n") and re.search(r"^name: equip$", text, re.M)
+assert text.startswith("---\n") and re.search(r"^name: equipgtm$", text, re.M)
 assert re.search(r"^description:", text, re.M)
 for path in sorted(actual):
     source = path.read_text()

@@ -1,5 +1,5 @@
 ---
-name: equip
+name: equipgtm
 license: MIT
 description: >-
   Plan, build, deliver, and improve complete technical workshop Git repositories

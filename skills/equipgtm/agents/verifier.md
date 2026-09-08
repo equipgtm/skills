@@ -1,5 +1,5 @@
 ---
-name: equip-verifier
+name: equipgtm-verifier
 description: >-
   Independently review EquipGTM workshop repository artifacts and product claims
   within the requested scope. Check content, rendered pages, downloads, exercises,

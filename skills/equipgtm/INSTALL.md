@@ -5,7 +5,7 @@
 In your workshop repository, run:
 
 ```bash
-npx skills add equipgtm/skills --skill equip
+npx skills add equipgtm/skills --skill equipgtm
 ```
 
 The [skills CLI](https://skills.sh/docs/cli) needs Node.js 22.20.0 or newer. Select your
@@ -17,26 +17,30 @@ The public source is [equipgtm/skills](https://github.com/equipgtm/skills). The 
 its included helpers use the MIT license. You can use them locally without an EquipGTM
 account; sign in when you want Studio to host learner pages and collect feedback.
 
+If you installed the early `equip` version, install `equipgtm` first and confirm it
+appears in your agent. Preserve any local edits, then remove the old `equip` skill from
+the same project or personal skill directory so the agent does not discover both names.
+
 ## Manual ZIP alternative
 
 Download [equipgtm-skill.zip](https://equipgtm.com/downloads/equipgtm-skill.zip) and extract it. The archive contains one
-`equip/` folder. Keep that folder intact: the references, templates and optional scripts
+`equipgtm/` folder. Keep that folder intact: the references, templates and optional scripts
 are part of the skill. The accompanying download manifest records each file and its
 SHA-256 checksum. This is a portable skill folder, not a marketplace plugin or MCP server.
 
-Move the extracted `equip` folder into the directory for your agent. If an `equip` folder
+Move the extracted `equipgtm` folder into the directory for your agent. If an `equipgtm` folder
 already exists, compare or back it up before replacing your edits.
 
 | Agent | Personal installation | Project-only alternative |
 | --- | --- | --- |
-| Codex | `~/.agents/skills/equip/` | `.agents/skills/equip/` in the workshop repository |
-| Claude Code | `~/.claude/skills/equip/` | `.claude/skills/equip/` in the workshop repository |
-| Cursor | `~/.cursor/skills/equip/` | `.cursor/skills/equip/` in the workshop repository |
+| Codex | `~/.agents/skills/equipgtm/` | `.agents/skills/equipgtm/` in the workshop repository |
+| Claude Code | `~/.claude/skills/equipgtm/` | `.claude/skills/equipgtm/` in the workshop repository |
+| Cursor | `~/.cursor/skills/equipgtm/` | `.cursor/skills/equipgtm/` in the workshop repository |
 
-The resulting path must end in `equip/SKILL.md`, without an extra nested `equip` folder.
+The resulting path must end in `equipgtm/SKILL.md`, without an extra nested `equipgtm` folder.
 Open the workshop repository in your agent. Select EquipGTM from its skill picker, or
-ask it to read the installed `equip/SKILL.md`. Codex CLI/IDE can invoke `$equip`; Claude
-Code can invoke `/equip`. If discovery has not refreshed, start a new agent session.
+ask it to read the installed `equipgtm/SKILL.md`. Codex CLI/IDE can invoke `$equipgtm`; Claude
+Code can invoke `/equipgtm`. If discovery has not refreshed, start a new agent session.
 
 These are local-agent instructions. A remote or cloud agent needs the skill in its own
 workspace or that product's supported sync/install flow; local files and browser sessions
