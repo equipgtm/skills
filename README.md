@@ -17,7 +17,7 @@ npx skills add equipgtm/skills --skill equipgtm
 
 Select your coding agent when prompted. The CLI defaults to project installation; choose
 global installation to use the skill across projects. It requires Node.js 22.20.0 or newer.
-Find it on [skills.sh](https://skills.sh/equipgtm/skills/equipgtm).
+Install directly from GitHub while [skills.sh updates the name](https://github.com/vercel-labs/skills/issues/2172).
 For a manual install, use the [GitHub release ZIP](https://github.com/equipgtm/skills/releases/latest/download/equipgtm-skill.zip)
 and [installation guide](skills/equipgtm/INSTALL.md).
 
