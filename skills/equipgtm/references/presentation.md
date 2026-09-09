@@ -12,33 +12,51 @@ requests call for findings, not edits.
 
 ## Plan the learning arc
 
-Read the workshop outcome, audience, module order, proofs, access plan and allotted time.
-Infer what is already clear; do not add an approval gate. Put the full story in a
-storyboard before rendering. One communication job per slide is the unit of design.
+Read the delivery brief from [intake.md](intake.md): event setting, presenter and customer
+organizations, speaker roles, audience size/depth, outcome, module order, proofs, access
+plan and allotted time. Resolve material uncertainty using its early direction check;
+reuse an accepted brief rather than asking again. Put the story in a storyboard before
+rendering, then inspect a representative sample before building the full deck. One
+communication job per slide is the unit of design. For a live instructor workshop,
+produce editable PowerPoint and source unless another format was requested; a PDF is
+a review/export companion, not a substitute for the presentation.
 
 Use the following beats where they serve the workshop, combining short beats when useful:
 
-1. **Problem and payoff.** Start with a concrete situation this audience recognizes.
+1. **Welcome and context.** Identify the workshop, host/presenting organization and
+   speakers with their roles. Explain why this customer audience is here and what the
+   session promises. Use the actual event details; pending names stay pending in drafts.
+2. **Problem and payoff.** Start with a concrete situation this audience recognizes.
    Show the result they will build or inspect before naming the services underneath it.
    Describe the promised result as the workshop goal until it has actually been verified.
-2. **Join and get ready.** Show an easy-to-type workshop URL for learners on laptops,
-   what to open, the access owner and where to ask for help. No workshop QR code.
-   Put detailed installs, account requirements and credit instructions in prerequisites.
-3. **The route through the workshop.** Show the meaningful steps, which parts are
+   For an application workshop, show the actual UI or a runnable demonstration of the
+   intended user journey. Name its input, action and output in language a customer uses.
+3. **The route through the session.** Show the meaningful steps, which parts are
    explanation versus hands-on, the checkpoints and the time reserved for questions.
-   Use the actual module titles; a list of vendor names is not an agenda.
-4. **Concept before mechanics.** Introduce a new idea with a worked example: the input,
+   Use the actual module titles; a list of vendor names is not an agenda. Include relevant
+   breaks, support arrangements and speaker handoffs in the run of show and notes.
+4. **The whole application.** Before the first lab, show a complete architecture with
+   named components, their roles, boundaries and the path of a request and its data.
+   For a published blueprint, map its parts to the workshop and explain substitutions.
+   Distinguish runtime flows from tracing and offline evaluation; do not connect every
+   tool as though it were another sequential request step. Follow the overview with
+   focused component explanations. Reveal the diagram at the presenter's pace.
+5. **Join and get ready.** Once the audience understands what they will build, show an
+   easy-to-type workshop URL, what to open, the access owner and where to ask for help.
+   No workshop QR code. Put detailed installs and credit instructions in prerequisites.
+   Pre-event access links may be shared earlier; they do not replace this orientation.
+6. **Concept before mechanics.** Introduce a new idea with a worked example: the input,
    the behavior that matters, and its result. Name the concept once the example gives the
    term meaning. For a technical audience that already knows it, go directly to the
    relevant design choice. Do not invent tautological definitions to fill a slide.
-5. **Explain → demonstrate → try → check.** For each module, connect a visual explanation
+7. **Explain → demonstrate → try → check.** For each module, connect a visual explanation
    to a small demonstration, then give learners one action and a visible success check.
    Keep complete commands and recovery paths in the lesson. Include a regroup cue so
    the instructor can resume the room without skipping people who need help.
-6. **Connect the pieces.** Trace one actual request or artifact through the architecture,
+8. **Connect the pieces again.** Return to the overview and trace one actual request or artifact through the architecture,
    showing boundaries, dependencies and why the important components are there. Explain
    product decisions through their role in the outcome, not a feature catalogue.
-7. **Recap, transfer and questions.** Return to the opening problem and the results the
+9. **Recap, transfer and questions.** Return to the opening problem and the results the
    audience should now be able to reproduce. Separate verified evidence from expected
    outputs. Name a useful next application, leave the promised Q&A time, and close with
    the survey link and, when available, its QR code.
@@ -46,6 +64,8 @@ Use the following beats where they serve the workshop, combining short beats whe
 Allocate explanation, demos, hands-on work, transitions, setup recovery and Q&A within the
 session length. Write timing in notes rather than cramming it onto every slide. Preserve
 section cues at real subject changes. The closing survey can stay on screen during Q&A.
+This is coverage for a live technical workshop, not a fixed slide count for every format.
+Do not force an unrelated template scenario onto the user's blueprint or customer outcome.
 
 ## Words, notes and visuals
 
@@ -57,6 +77,11 @@ section cues at real subject changes. The closing survey can stay on screen duri
   it with the talk track. Cut repeated ideas, empty promises, slogan fragments and wording
   the instructor would not say. Use `no-ai-slop` for the final copy pass when installed; otherwise perform the same
   plain-language review directly from these criteria. A word blacklist cannot approve the meaning of a slide.
+- Name the concrete user task, tools and behavior. A phrase such as "a policy question
+  with missing evidence" needs the actual question and missing source explained; it is
+  not sufficient workshop context. Use the verified scenario's own terms, not an invented
+  replacement story. Keep necessary technical terms, agenda and section labels. Do not
+  compress away meaning to meet the word budget: split the explanation across slides.
 - Put the explanation in speaker notes: what to say, what to point at, why the step
   matters, the click sequence, demo/hands-on instructions, expected output, recovery cue,
   time allowance and handoff to the next slide. Keep instructor answers out of learner
@@ -75,6 +100,9 @@ section cues at real subject changes. The closing survey can stay on screen duri
   generated picture can explain a concept but cannot prove behavior. Show only the code
   lines or crop the audience needs, usually no more than 12 lines; keep full detail in
   the lab. Inspect every asset at full size for legibility, crop and distortion.
+  When the application is not running yet, mark the screenshot/demo as pending in the
+  storyboard, then capture the real application after it runs. An explicitly labeled
+  wireframe may support early planning; never pass it off as a product screenshot.
 - Give slides unique semantic titles, meaningful alt text and sensible reading order.
   Use sufficient contrast and avoid relying on color alone. Notes should contain complete
   `[Sources]` / `[/Sources]` blocks for external claims and assets; use `Presenter
@@ -113,6 +141,10 @@ same company name, original logo and palette as the instructional pages and surv
 Preserve logo proportions and clear space, and use a supplied variant that remains
 visible against the chosen background. Do not invent a customer mark or treat a product
 icon as the customer's identity. With no customer brand supplied, use EquipGTM defaults.
+Separate the host/customer identity from the products being taught. Obtain real product
+logos from supplied or official assets, record their sources and preserve their shapes.
+Do not substitute typed initials, invented marks or generic icons for requested logos.
+If an asset is unavailable, use a plain product label and report the missing logo.
 
 Keep editable slide source and original brand assets in the repository. Studio branding
 styles its workshop pages and survey, but it does not recolor, replace logos in or
@@ -185,6 +217,15 @@ composition or accessibility. Notes and image-alt coverage are mechanical checks
 
 Complete the checks the actual deliverable needs:
 
+0. Before full rendering, review the storyboard as someone arriving at this event:
+   can they tell who is teaching, why they are here, what application they will build,
+   what it looks like, how its components connect, how the session is organized and
+   when to open the workshop? Check each required job against an actual slide and
+   evidence asset, not just a promise in notes. For blueprint workshops, confirm all
+   intended parts and substitutions are explained. For live delivery, check section
+   introductions, practice/regroup cues and a usable run of show. Fix missing context
+   before spending time on complete layouts or animations. Record justified omissions
+   for other formats. Audit the rendered sample for the same jobs.
 1. Render every slide; inspect the montage for the full story and each slide at full
    size for wrapping, clipping, overlap, asset quality and readability. Check final
    reveal states against the word budget. Fix overflow and unclear copy.

@@ -42,6 +42,8 @@ recorded and used immediately.
 | Outcome and audience | What learners can do afterward, their roles and technical depth, and the customer scenario |
 | Products and technology roles | Every relevant component, what it contributes to the outcome, supplied versions/docs, and which parts learners build versus use preconfigured |
 | Teaching format | Duration, live/self-paced, hands-on versus watch-along, module arc, demo and Q&A time |
+| Delivery setting | Who is hosting and teaching whom; customer event, meetup, internal training or self-paced course; attendee count, room/remote format, projected viewing conditions and prior knowledge |
+| Presenter and session context | Speaker names, roles and organizations, facilitator/support roles, what attendees were promised, prework versus day-of setup, breaks and speaker handoffs where relevant |
 | Source repository | Existing/new local Git repo, requested remote host/owner, source conventions and requested files |
 | Content host | Where the pages, module instructions and material links will be delivered |
 | Exercise environment | Where the actual work runs: local code, notebook, vendor console or provided sandbox |
@@ -82,6 +84,7 @@ Keep `PLAN.md` short enough to review. Record:
 
 - Audience, outcome, scenario and the product source to verify against.
 - The module journey and rough timing, with an observable check per meaningful step.
+- For slides, the delivery brief and early direction check described below: who is in the room, presenter context, run of show, application payoff, architecture and planned evidence.
 - The three destinations, repository owner/location and access responsibilities.
 - Files to create or revise, setup/preflight/cleanup needs and optional learner-agent prompt.
 - Selected brand and source assets, including any pending customer styling decisions.
@@ -93,6 +96,43 @@ shares a workshop URL; learners open the instructional pages and download the re
 code/prompts/skills to begin. The complete Git repository and the releases built from it
 remain the deliverables, rather than a manual JSON workflow. Reuse an agreed outcome and scope;
 only unresolved decisions that block a dependent step need to pause that step.
+
+## Catch the wrong presentation before building it
+
+For a new deck or substantial presentation redesign, establish the **delivery brief**
+before writing slide-generation code. A customer workshop in a room of 50 people needs
+an introduction, presenter context, agenda, technical orientation and clear transitions
+into exercises. A self-paced course or five-minute demo needs a different structure.
+Do not assume that a module list describes how the actual session will run.
+
+Reuse supplied context. Ask a short, bundled question only for missing choices that
+would change the deck: who is teaching whom, the session format/time, what learners
+will build and how much is hands-on. Speaker names, dates and final links can remain
+clearly pending; do not invent them or let them block a storyboard. Default to an
+editable PowerPoint plus source for a live instructor deck unless another format is
+requested. Put the brief in `PLAN.md`, not a new intake form the user must fill out.
+
+Before bulk slide authoring, show a compact direction preview in the conversation:
+
+- The assumed delivery setting and the result attendees will build.
+- The opening sequence and timed session sections, including setup, practice and Q&A.
+- A slide storyboard with each slide's job, proposed title, visual/evidence and learner or presenter action. Mark repeatable module patterns without drafting every module in full.
+- The proposed full architecture and end-result UI/demo, with supplied, verified or pending assets distinguished.
+
+Aim to surface this in the first few minutes of planning; report missing source evidence
+instead of spending a long research or rendering pass in silence. For a first deck with
+no agreed presentation direction, ask the user to resolve that direction before bulk
+rendering. This is a content decision, not permission to execute routine work. Continue
+independent source inspection while waiting. If the user already supplied or accepted
+the direction, or explicitly asked for autonomous execution, show the preview and proceed
+without asking again.
+
+Then render a small representative sample: the opening, full architecture and one
+technical explanation or exercise handoff. Inspect them before expanding the deck, and
+show the sample for early correction. Do not build every slide's custom layout and
+animation before this check. Preserve accepted choices in `PLAN.md` and revise only
+affected sections when feedback arrives. Follow [presentation.md](presentation.md) for
+the story and acceptance criteria; a word-count pass alone cannot approve a deck.
 
 ## Handling an incomplete brief
 

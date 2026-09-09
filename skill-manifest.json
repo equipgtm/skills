@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "name": "equipgtm",
   "title": "EquipGTM authoring skill",
-  "version": "e5331756a6678fc6",
+  "version": "493f16ec2a51202d",
   "format": "agent-skill-zip",
   "entrypoint": "equipgtm/SKILL.md",
   "downloadUrl": "/downloads/equipgtm-skill.zip",
   "installationGuide": "/downloads/INSTALL.md",
-  "bytes": 93019,
-  "sha256": "a1538abfa947261fa97e85f78f6248826aa229159a75cb00d071bc6c3b7591db",
+  "bytes": 96364,
+  "sha256": "51fa6437346eadd6baa2326a38c7d0b4241de1afbd6906b0e63077889d89a5d9",
   "fileCount": 27,
   "files": [
     {
@@ -23,8 +23,8 @@
     },
     {
       "path": "equipgtm/SKILL.md",
-      "bytes": 23122,
-      "sha256": "2c4d5fa1d92877a49d38ec31fbdbb821f5aa19e5ddf204e6c8e401e1ba377b2f"
+      "bytes": 23478,
+      "sha256": "175ea157caf852c09daa5eb0f60cf995f28c16a512b97fc0eeba8b1af5d91a7f"
     },
     {
       "path": "equipgtm/agents/verifier.md",
@@ -38,8 +38,8 @@
     },
     {
       "path": "equipgtm/assets/presentation-template.json",
-      "bytes": 6596,
-      "sha256": "d4364fafcd0751837b55b4af0dd18a802b84b5aa99441eab2f09906e6eae4779"
+      "bytes": 9548,
+      "sha256": "56de8dfcd843169516da164d806adec6f6578b9ec160a76d097499e5492e7245"
     },
     {
       "path": "equipgtm/assets/workshop-shell/app.js",
@@ -73,13 +73,13 @@
     },
     {
       "path": "equipgtm/references/facilitation.md",
-      "bytes": 2659,
-      "sha256": "e35b8f1f3d4d198d2a040c8f7b79ee077adad596827447aa5662dda57e56d5c8"
+      "bytes": 2951,
+      "sha256": "d760ed506b59ae3ba9b290d5d0759da1c83e0387765e41f2392ff477cf4485c5"
     },
     {
       "path": "equipgtm/references/intake.md",
-      "bytes": 7559,
-      "sha256": "d18d1b954fdf20cacd4898d134ce08992fdb2c02c09c5bc2a4c382900f1b5340"
+      "bytes": 10721,
+      "sha256": "e5e3a4126bf67b40fad21c284e6e1e50398474fbf846ef042c76c70b00fb3477"
     },
     {
       "path": "equipgtm/references/poc-plan.md",
@@ -88,8 +88,8 @@
     },
     {
       "path": "equipgtm/references/presentation.md",
-      "bytes": 13842,
-      "sha256": "3caaa402add4f14d1b789a8c7a8cb80779ec93c776619d5fe0bd4b1349814f5a"
+      "bytes": 17385,
+      "sha256": "16ebcc92d9d0d0e676264410004b229e522e7189aad4223e15b1fa17406c981b"
     },
     {
       "path": "equipgtm/references/refresh.md",

@@ -34,7 +34,8 @@ Open a fresh agent session in your workshop repository. Invoke `$equipgtm` in Co
 The skill can help produce:
 
 - Instructional pages, setup steps, exercises, example code and verification scripts.
-- Presentations with a teaching story, readable slides and instructor-controlled reveals.
+- Presentations planned for the actual event and audience, with an early storyboard
+  review, architecture and application visuals, readable slides and instructor-controlled reveals.
 - Learner downloads, agent prompts, instructor notes and facilitation guides.
 - Surveys and a revision plan based on feedback learners choose to submit.
 

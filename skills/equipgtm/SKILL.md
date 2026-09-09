@@ -128,7 +128,11 @@ does not reinvent renderers that exist:
 - Discover the current agent's installed skills before delegating an artifact; names and
   supported outputs vary by client. Do not require a skill merely because an example names it.
 - Slides or a deck → first read [references/presentation.md](references/presentation.md),
-  which contains EquipGTM's workshop story, 40-word slide budget, visual and reveal rules.
+  and the delivery-brief/direction check in [references/intake.md](references/intake.md).
+  Establish the event, presenters, audience, agenda, application and architecture before
+  bulk slide authoring. Show the storyboard early, then inspect a small rendered sample
+  before expanding the deck. The presentation recipe includes the 40-word slide budget,
+  visual and reveal rules; passing those checks does not establish a useful workshop story.
   Use an available presentation skill for rendering mechanics. The separate
   `tech-presentations` skill is not required; its relevant preferences are adapted here.
 - Raster images and illustrations → an available image skill or tool, such as **`imagegen`**.

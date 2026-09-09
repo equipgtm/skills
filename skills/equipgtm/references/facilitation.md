@@ -2,8 +2,10 @@
 
 Producing a workshop is half the job; running it live is the other half. This is the
 train-the-trainer layer: the run-of-show, the timing, the cuts for the room, and what to do
-when something breaks. Build it from the manifest and the module set so it stays in sync
-with the content. Write `facilitation.md`.
+when something breaks. Build it from the delivery brief in `PLAN.md` and the module set
+so it stays in sync with the content. Write `facilitation.md`. For live events, include
+the host/customer context, speakers and handoffs, helper roles, room/remote setup,
+prework, breaks and the actual session agenda. Keep unresolved names visibly pending.
 
 ## Plan the cut
 
@@ -42,7 +44,8 @@ on our repo."
 
 Keep instructor preparation and learner setup distinct. EquipGTM does not supply vendor
 accounts or credentials. If learners use a coding agent, point them to the optional setup
-prompt; notebook/console workflows need not require one. The opening workshop URL is typed
+prompt; notebook/console workflows need not require one. Introduce the application,
+session route and architecture before the hands-on handoff. The workshop URL is typed
 on a laptop (no QR); the close can show a survey QR with a readable URL fallback.
 
 ## After the session

@@ -3,88 +3,136 @@
   "surveyUrl": "",
   "slides": [
     {
-      "id": "opening",
+      "id": "welcome",
       "kind": "opening",
-      "title": "Catch entitlement drift before production",
-      "body": "A customer changes plan. Two services disagree about their access. Today, you will build a check that spots the mismatch.",
-      "notes": "Introduce a concrete customer scenario. This is the workshop goal, not a claim that an untested example already works. Show a real before/after result once the verifier has reproduced it. Allow 2 minutes. [Sources] Presenter synthesis; replace with the product evidence used in this workshop. [/Sources]",
-      "visual": "Compare the same customer's plan in two services. Label the differing entitlement. Use a real sanitized screenshot when available; otherwise identify this as an illustrative scenario.",
+      "title": "[Workshop title]",
+      "body": "[Presenter name and role] · [Presenting organization]",
+      "notes": "Start from the agreed delivery brief. Introduce the host, speakers and customer audience; explain what brought this group together. Names remain pending until supplied. This template is a storyboard scaffold, not a ready deck. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "Original host/presenter logo and workshop identity. Use supplied or official assets; do not invent marks.",
+      "reveals": []
+    },
+    {
+      "id": "outcome",
+      "kind": "concept",
+      "title": "[What customers will build]",
+      "body": "[The actual user task, input and useful result]",
+      "notes": "Explain the customer problem with a concrete example from the agreed scenario. Identify what the published blueprint provides and what learners will implement. Describe unverified behavior as the intended result. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "Actual application screenshot or brief live demo showing the user journey. If the app is not running, mark capture pending; do not fabricate a successful screen.",
+      "reveals": []
+    },
+    {
+      "id": "agenda",
+      "kind": "agenda",
+      "title": "Today’s workshop",
+      "body": "[Introduction and demo] → [Build sections] → [Test and discuss]",
+      "notes": "Replace placeholders with meaningful session sections and realistic times. Include setup, demonstrations, hands-on time, regrouping, breaks and Q&A within the actual slot. Record speaker handoffs and support roles. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "Readable session route, distinguishing presenter-led explanation from learner practice. Do not use a vendor list as the agenda.",
+      "reveals": []
+    },
+    {
+      "id": "architecture",
+      "kind": "concept",
+      "title": "[Application name]: how the parts connect",
+      "body": "[Label each component with its role]",
+      "notes": "Show the whole application before the first lab. Map every intended blueprint part and substitution. Start with the user input, then reveal runtime components and data paths; introduce tracing and evaluation as separate flows. Specify actual object groups and click order in the authored notes. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "Complete architecture using real product logos, role labels, directional arrows and boundaries. Show inputs, storage, model calls, UI output, tracing and evaluation only where the actual stack uses them.",
+      "reveals": [
+        "[Runtime components and request path]",
+        "[Data sources and return path]",
+        "[Tracing and evaluation flows]"
+      ]
+    },
+    {
+      "id": "setup",
+      "kind": "concept",
+      "title": "Before we start building",
+      "body": "[Required accounts] · [Environment] · [Where to get help]",
+      "notes": "Use the access plan: distinguish prework from day-of setup, name who supplies access/credits and who helps attendees. Explain the fallback. Keep install commands and secrets in the appropriate local setup instructions. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "A simple environment orientation using the actual notebook, editor or console. Show the success indicator learners should check.",
       "reveals": []
     },
     {
       "id": "join",
       "kind": "join",
       "title": "Open the workshop on your laptop",
-      "body": "Keep the lessons beside your editor. Check prerequisites and ask the instructor if access is missing.",
-      "notes": "The workshop URL is pending. Bind a verified, easy-to-type session URL before delivering. Read it aloud and allow setup time. Do not create a QR for this slide. The learner uses their own agent and vendor account or the documented vendor-provided sandbox. [Sources] Workshop prerequisites and session access plan. [/Sources]",
-      "visual": "Large, readable workshop URL when available, with a laptop icon. No workshop QR code.",
+      "body": "Keep the instructions beside your working environment.",
+      "notes": "Bind the real session URL before delivery. Introduce the destination after the application, agenda and architecture. Read it aloud and allow time to open it. No workshop QR code. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "A large, easy-to-type verified workshop URL. Until bound, show Workshop link pending.",
       "reveals": []
     },
     {
-      "id": "agenda",
-      "kind": "agenda",
-      "title": "See it, encode it, check it",
-      "body": "First we inspect a mismatch. Then we describe the rule. Finally, we run the check and compare results.",
-      "notes": "Explain which portions are demonstrations and which are hands-on. Align the route with actual module names, checks and timing. Reserve time for regrouping and questions before expanding the technical middle. [Sources] Workshop module plan. [/Sources]",
-      "visual": "Three connected steps with a consistent icon for inspect, rule and check. Highlight where learners will work in their editor.",
-      "reveals": []
-    },
-    {
-      "id": "concept",
+      "id": "section",
       "kind": "concept",
-      "title": "One plan change reaches two services",
-      "body": "Start with the customer's plan.",
-      "notes": "Start: customer and current plan. Click 1: reveal Service A and its access value. Click 2: reveal Service B and its different value. Click 3: connect the two and name the disagreement entitlement drift. Explain the behavior before introducing the term. Group each service, label and connector. [Sources] Presenter synthesis; ground values in the verified exercise fixture. [/Sources]",
-      "visual": "A request path from a customer plan to two named application services. Use semantic icons and group each label with its node and connecting arrow.",
+      "title": "[Section number and name]",
+      "body": "[What this part adds to the application]",
+      "notes": "Repeat this section/concept/exercise/debrief pattern only for meaningful parts of the agreed module arc. State where the room is in the agenda and the next observable outcome. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "Return to the architecture with this section’s components highlighted; keep product labels consistent.",
+      "reveals": []
+    },
+    {
+      "id": "component",
+      "kind": "concept",
+      "title": "[How this component handles the task]",
+      "body": "[Explain the actual input, action and output]",
+      "notes": "Use a worked example from the workshop. Explain the tool’s role and design choice, then demonstrate it. Plan Start, Click 1 and subsequent object reveals before rendering. Avoid generic definitions that do not explain this application. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "A focused request path plus real code, trace or output relevant to this component. Keep the complete architecture available for context.",
       "reveals": [
-        "Service A grants access.",
-        "Service B denies access.",
-        "The mismatch is entitlement drift."
+        "[First meaningful step, with label and connector]",
+        "[Next step and its observed result]"
       ]
     },
     {
       "id": "exercise",
       "kind": "exercise",
-      "title": "Find the mismatch",
-      "body": "Open the first exercise. Compare both service records. Record the differing entitlement before changing anything.",
-      "notes": "Point to the exact lesson and checkpoint after they have been authored. Demonstrate only the first action, then pause for learners. Put full commands, expected results and reset instructions in the lesson. Ask the room to signal when ready to regroup. [Sources] First workshop module and its reproduced verification record. [/Sources]",
-      "visual": "A readable crop of the actual records, highlighting only the fields needed for the exercise. Do not fabricate successful output.",
+      "title": "[Build or change one concrete behavior]",
+      "body": "[Lesson to open] · [Learner action] · [Success check]",
+      "notes": "Point to the exact lesson. Demonstrate the first action, then leave time to practice. Record duration, support route, a regroup cue and a recovery path. Full commands and solutions belong in the appropriate lesson/instructor files. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "A readable crop of the exercise entry point or expected checkpoint, sourced from the actual materials.",
       "reveals": []
     },
     {
       "id": "debrief",
       "kind": "debrief",
-      "title": "What did your check find?",
-      "body": "Compare your output with the checkpoint. Explain why the mismatch matters and what the rule must preserve.",
-      "notes": "Use the real expected output from verification. Distinguish a learner's report from a reproduced result. Discuss one common mistake and its recovery path before continuing. If access blocked the exercise, show the verified demo and state the limitation. [Sources] Module proof, verifier output and facilitator recovery notes. [/Sources]",
-      "visual": "Actual checkpoint output beside the relevant rule. Use direct labels, not a full terminal screenshot with unreadable lines.",
+      "title": "[What changed in the application?]",
+      "body": "[Compare the result with the checkpoint]",
+      "notes": "Regroup the room. Explain why the observed behavior matters, discuss a common mistake and connect the outcome to the next section. Distinguish verified output from expected output. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "Real output or a before/after comparison, with only the relevant fields highlighted.",
+      "reveals": []
+    },
+    {
+      "id": "integration",
+      "kind": "concept",
+      "title": "[Run the completed application]",
+      "body": "[Trace the result through the components]",
+      "notes": "Return to the opening task and full architecture. Demonstrate what now works and explain remaining limits. For an evaluation module, show the dataset, checks and observed comparison; keep tracing distinct from evaluation. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "Actual application UI and relevant measured results. The architecture can highlight the path being demonstrated.",
       "reveals": []
     },
     {
       "id": "recap",
       "kind": "recap",
-      "title": "Carry the check into your own workflow",
-      "body": "Inspect the mismatch. Encode the rule. Run the check. Choose one real workflow where this pattern could prevent a customer problem.",
-      "notes": "Return to the opening customer scenario. Summarize only what the exercises and evidence support. Name the pieces the learner can adapt and the checks needed before using them with real customer data. [Sources] Workshop modules and verification records. [/Sources]",
-      "visual": "Return to the opening comparison, now connected to the rule and check. Show measured or reproduced results only when available.",
+      "title": "[What learners can now build]",
+      "body": "[Completed capabilities and a practical next use case]",
+      "notes": "Recap only outcomes the workshop supports. Point to reusable repository files and explain what learners would adapt for their own use case. Avoid unsupported production-readiness claims. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "Return to the opening application or workflow with the completed capabilities labeled.",
       "reveals": []
     },
     {
       "id": "questions",
       "kind": "questions",
-      "title": "Where would this fit in your system?",
-      "body": "Bring a question, a tradeoff, or a setup problem we should work through together.",
-      "notes": "Use the reserved Q&A time. Record unanswered product questions for follow-up without inventing behavior. Move to the survey close while learners consider their next application. [Sources] Presenter synthesis. [/Sources]",
-      "visual": "One restrained question or conversation icon. Keep the screen quiet while the room speaks.",
+      "title": "Questions and next steps",
+      "body": "[A useful prompt about applying this workshop]",
+      "notes": "Use the reserved Q&A time. Record unanswered questions and requested follow-up without inventing answers. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "A quiet, readable slide with the relevant support or documentation route when known.",
       "reveals": []
     },
     {
       "id": "survey",
       "kind": "survey",
-      "title": "Help improve the next workshop",
-      "body": "Tell us what you could complete, where you got stuck, and what we should change.",
-      "notes": "The survey URL is pending. Bind this session's verified survey link before delivery. Generate its QR only from that real URL, show the readable URL as fallback, and test the final slide on a phone. Allow time to respond. [Sources] Session survey definition. [/Sources]",
-      "visual": "A high-contrast QR for the verified survey URL, with its readable URL alongside it. Keep an intact quiet zone. Until a real URL exists, show Survey link pending and no QR.",
+      "title": "Tell us how the workshop went",
+      "body": "What could you complete? Where did you get stuck? What should change?",
+      "notes": "Bind this session’s real survey destination. Allow time to respond. Generate a QR only for that verified URL and test the final slide; show the readable link too. [Sources] Replace with the actual workshop plan, product documentation or captured evidence. [/Sources]",
+      "visual": "Verified survey URL and matching QR with a quiet zone. Until configured, show Survey link pending and no QR.",
       "reveals": []
     }
   ]
